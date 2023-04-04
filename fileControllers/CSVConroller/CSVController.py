@@ -1,6 +1,6 @@
-from controllers.CSVConroller.CSVReader import Reader
-from controllers.CSVConroller.CSVRecord import Record
-from controllers.CSVConroller.NoteMask import NoteMask
+from fileControllers.CSVConroller.CSVReader import Reader
+from fileControllers.CSVConroller.CSVRecord import Record
+from fileControllers.CSVConroller.NoteMask import NoteMask
 from core.Note import Note
 
 

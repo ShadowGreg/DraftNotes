@@ -1,6 +1,6 @@
 import io
 
-from controllers.CSVConroller.NoteMask import NoteMask
+from fileControllers.CSVConroller.NoteMask import NoteMask
 
 
 class Reader:
