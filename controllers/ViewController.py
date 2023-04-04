@@ -73,11 +73,11 @@ class ViewController:
 
     def input_title(self):
         self.view_tipe.add_title()
-        return input()
+        return str(input())
 
     def input_body(self):
         self.view_tipe.add_body()
-        return input()
+        return str(input())
 
     def list(self):
         list_filter = Filter(self.core_tipe, self.read_data())
