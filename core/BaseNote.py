@@ -6,8 +6,8 @@ class BaseNote:
     created_at = None
     modified_at = None
 
-    def __init__(self, id: str, title: str, body: str, created_at: str, modified_at: str):
-        self.id = id
+    def __init__(self, in_id: str, title: str, body: str, created_at: str, modified_at: str):
+        self.id = in_id
         self.title = title
         self.body = body
         self.created_at = created_at
@@ -31,3 +31,4 @@ class BaseNote:
 
     def __lt__(self, other):
         return self.created_at < other.created_at
+

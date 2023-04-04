@@ -11,4 +11,4 @@ class NoteMask:
 
     @staticmethod
     def make_base_note(array: []):
-        return Note.BaseNote(id=array[0], title=array[1], body=array[2], created_at=array[3], modified_at=array[4])
+        return Note.BaseNote(in_id=array[0], title=array[1], body=array[2], created_at=array[3], modified_at=array[4])

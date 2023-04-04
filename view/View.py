@@ -32,8 +32,8 @@ class View:
         print(mt.list_filter)
 
     @staticmethod
-    def delete_note():
-        print(mt.delete_note)
+    def search_note():
+        print(mt.search_note)
 
     @staticmethod
     def some_notes_specify():

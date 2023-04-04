@@ -36,7 +36,21 @@ class ViewController:
             msg = self.command_verification(key_list, input())
 
     def read_note(self):
-        pass
+        list_filter = Filter(self.core_tipe, self.read_data())
+        self.view_tipe.search_note()
+        id_note = str(input())
+
+        id_note = self.search_for_single_note(id_note, list_filter)
+        filtered_lis = list_filter.filter_id(id_note)
+        print(self.text_formatter(filtered_lis[0].__repr__()))
+
+    def text_formatter(self, msg: str):
+        new_text = ''
+        for i in range(len(msg)):
+            new_text += msg[i]
+            if i % 100 == 0:
+                new_text += '\n'
+        return new_text
 
     def read_data(self):
         return self.file_tipe.read()
@@ -81,27 +95,30 @@ class ViewController:
 
     def delete(self):
         list_filter = Filter(self.core_tipe, self.read_data())
-        self.view_tipe.delete_note()
+        self.view_tipe.search_note()
         id_note = str(input())
-        filtered_lis = list_filter.filter_id(id_note)
 
+        id_note = self.search_for_single_note(id_note, list_filter)
+
+        self.data = list_filter.get_cleared_array(id_note)
+        self.write_data()
+
+    def search_for_single_note(self, id_note, list_filter):
+        filtered_lis = list_filter.filter_id(id_note)
         while len(filtered_lis) > 1:
             self.view_tipe.some_notes_specify()
             self.print_for_search(filtered_lis)
-            self.view_tipe.delete_note()
+            self.view_tipe.search_note()
             id_note = str(input())
             filtered_lis = list_filter.filter_id(id_note)
             if id_note == 'EXIT':
                 self.run()
                 pass
-
-        self.data = list_filter.get_cleared_array(id_note)
-        self.write_data()
+        return id_note
 
     def print_for_search(self, array: [BaseNote]):
         for item in array:
             print(item.get_text_for_search())
-
 
     def command_verification(self, keys: [], msg: str):
         msg = msg.upper()
