@@ -38,3 +38,11 @@ class View:
     @staticmethod
     def some_notes_specify():
         print(mt.some_notes_specify)
+
+    @staticmethod
+    def title_note():
+        print(mt.title_note)
+
+    @staticmethod
+    def body_note():
+        print(mt.body_note)

@@ -2,12 +2,15 @@ from core.BaseNote import BaseNote
 from fileControllers.FileController import FileController
 from view.Filter import Filter
 from view.View import View
+import logging
 
 
 class ViewController:
     data = [BaseNote]
     start_msg = 'MENU'
     exit_msg = 'EXIT'
+    logging.basicConfig(filename='./log/main.log', format='%(asctime)s -> %(message)s', encoding='utf-8',
+                        level=logging.INFO)
 
     def __init__(self, view_tipe: View, core_tipe: BaseNote, file_tipe: FileController):
         self.view_tipe = view_tipe
@@ -30,7 +33,7 @@ class ViewController:
             key_list.append(self.exit_msg)
 
             if msg != 'EXIT':
-                menu_control[msg]()
+                self.error_handling(menu_control[msg])
 
             self.view_tipe.select_command()
             msg = self.command_verification(key_list, input())
@@ -91,7 +94,20 @@ class ViewController:
         self.data = None
 
     def edit(self):
-        pass
+        list_filter = Filter(self.core_tipe, self.read_data())
+        self.view_tipe.search_note()
+        id_note = str(input())
+
+        id_note = self.search_for_single_note(id_note, list_filter)
+        note = list_filter.get_one_note(id_note)
+        self.view_tipe.title_note()
+        new_title = str(input())
+        self.view_tipe.body_note()
+        new_body = str(input())
+        self.data = list_filter.get_cleared_array(id_note)
+        modify_note = note.modify(new_title, new_body)
+        self.data.append(modify_note)
+        self.write_data()
 
     def delete(self):
         list_filter = Filter(self.core_tipe, self.read_data())
@@ -127,3 +143,11 @@ class ViewController:
         else:
             self.view_tipe.no_command()
             return self.start_msg
+
+    def error_handling(self, command):
+        try:
+            command()
+            logging.info(f'{str(command)}')
+        except Exception as e:
+            print(str(e))
+            logging.error(f'{str(e)}')

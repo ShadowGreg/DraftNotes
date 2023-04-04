@@ -29,3 +29,9 @@ class Filter:
             if input_id not in item.id:
                 array.append(item)
         return array
+
+    def get_one_note(self, in_id) -> BaseNote:
+        for note in self.array:
+            if in_id in note.id:
+                return note
+        return None

@@ -2,7 +2,13 @@ import core.BaseNote as Note
 
 
 class NoteMask:
-    def __init__(self, note_class: Note):
+    title = ''
+    body = ''
+    id = ''
+    created_at = ''
+    modified_at = ''
+
+    def __init__(self, note_class: Note.BaseNote):
         self.title = note_class.title
         self.body = note_class.body
         self.id = note_class.id
