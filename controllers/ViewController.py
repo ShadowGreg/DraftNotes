@@ -1,5 +1,6 @@
 from core.BaseNote import BaseNote
 from fileControllers.FileController import FileController
+from view.Filter import Filter
 from view.View import View
 
 
@@ -58,7 +59,15 @@ class ViewController:
         return input()
 
     def list(self):
-        self.data = self.read_data()
+        list_filter = Filter(self.core_tipe, self.read_data())
+        self.view_tipe.list_filter()
+        filter_date = str(input())
+
+        if filter_date == '':
+            self.data = list_filter.filter_data()
+        else:
+            self.data = list_filter.filter_data(filter_date)
+
         for item in self.data:
             print(item.short_text())
         self.data = None

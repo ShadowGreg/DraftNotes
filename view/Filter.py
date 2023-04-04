@@ -12,6 +12,6 @@ class Filter:
         else:
             array = []
             for item in self.array:
-                if item.created_at == date:
+                if date in item.created_at:
                     array.append(item)
             return array

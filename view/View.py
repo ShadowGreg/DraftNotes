@@ -26,3 +26,7 @@ class View:
     @staticmethod
     def no_command():
         print(mt.no_command)
+
+    @staticmethod
+    def list_filter():
+        print(mt.list_filter)
