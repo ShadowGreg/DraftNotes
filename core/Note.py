@@ -17,5 +17,5 @@ class Note(BaseNote):
     def __str__(self):
         return super().__str__()
 
-    def short_text(self):
-        return super().short_text()
+    def get_short_text(self):
+        return super().get_short_text()

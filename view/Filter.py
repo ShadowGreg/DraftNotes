@@ -15,3 +15,17 @@ class Filter:
                 if date in item.created_at:
                     array.append(item)
             return array
+
+    def filter_id(self, input_id: str):
+        array = []
+        for item in self.array:
+            if input_id in item.id:
+                array.append(item)
+        return array
+
+    def get_cleared_array(self, input_id: str):
+        array = []
+        for item in self.array:
+            if input_id not in item.id:
+                array.append(item)
+        return array

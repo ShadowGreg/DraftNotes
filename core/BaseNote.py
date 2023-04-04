@@ -21,9 +21,13 @@ class BaseNote:
     def __repr__(self):
         return self.__str__()
 
-    def short_text(self):
+    def get_short_text(self):
         end_index = 30
         return f"\nNote {self.id[0:8]}: {self.title}\n{self.body[0:end_index]}\nCreated at: {str(self.created_at)}\n"
+
+    def get_text_for_search(self):
+        end_index = 30
+        return f"\nNote {self.id}\n Title: {self.title}\n{self.body[0:end_index]}\nCreated at: {str(self.created_at)}\n"
 
     def __lt__(self, other):
         return self.created_at < other.created_at

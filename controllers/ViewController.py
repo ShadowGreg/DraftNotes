@@ -20,7 +20,8 @@ class ViewController:
             'ADD': self.add,
             'LIST': self.list,
             'EDIT': self.edit,
-            'DELETE': self.delete
+            'DELETE': self.delete,
+            'READ': self.read_note
         }
 
         while msg != self.exit_msg:
@@ -33,6 +34,9 @@ class ViewController:
 
             self.view_tipe.select_command()
             msg = self.command_verification(key_list, input())
+
+    def read_note(self):
+        pass
 
     def read_data(self):
         return self.file_tipe.read()
@@ -69,14 +73,35 @@ class ViewController:
             self.data = list_filter.filter_data(filter_date)
 
         for item in self.data:
-            print(item.short_text())
+            print(item.get_short_text())
         self.data = None
 
     def edit(self):
         pass
 
     def delete(self):
-        pass
+        list_filter = Filter(self.core_tipe, self.read_data())
+        self.view_tipe.delete_note()
+        id_note = str(input())
+        filtered_lis = list_filter.filter_id(id_note)
+
+        while len(filtered_lis) > 1:
+            self.view_tipe.some_notes_specify()
+            self.print_for_search(filtered_lis)
+            self.view_tipe.delete_note()
+            id_note = str(input())
+            filtered_lis = list_filter.filter_id(id_note)
+            if id_note == 'EXIT':
+                self.run()
+                pass
+
+        self.data = list_filter.get_cleared_array(id_note)
+        self.write_data()
+
+    def print_for_search(self, array: [BaseNote]):
+        for item in array:
+            print(item.get_text_for_search())
+
 
     def command_verification(self, keys: [], msg: str):
         msg = msg.upper()
