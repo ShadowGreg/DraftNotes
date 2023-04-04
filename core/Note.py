@@ -14,10 +14,8 @@ class Note(BaseNote):
         self.body = body if body is not None else self.body
         self.modified_at = datetime.datetime.now().strftime("%H-%M, %d %B, %Y").__str__()
 
-    @property
     def __str__(self):
         return super().__str__()
 
-    @property
     def short_text(self):
         return super().short_text()
