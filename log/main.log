@@ -1,0 +1,36 @@
+2023-04-04 21:35:49,994 -> <bound method ViewController.menu of <controllers.ViewController.ViewController object at 0x0000022F377244D0>>
+2023-04-04 21:35:55,560 -> <bound method ViewController.list of <controllers.ViewController.ViewController object at 0x0000022F377244D0>>
+2023-04-04 21:36:05,964 -> <bound method ViewController.read_note of <controllers.ViewController.ViewController object at 0x0000022F377244D0>>
+2023-04-04 21:36:10,110 -> <bound method ViewController.menu of <controllers.ViewController.ViewController object at 0x0000022F377244D0>>
+2023-04-04 21:43:10,162 -> <bound method ViewController.menu of <controllers.ViewController.ViewController object at 0x000001B4CA1144D0>>
+2023-04-04 21:43:14,005 -> <bound method ViewController.menu of <controllers.ViewController.ViewController object at 0x000001B4CA1144D0>>
+2023-04-04 21:43:17,859 -> <bound method ViewController.list of <controllers.ViewController.ViewController object at 0x000001B4CA1144D0>>
+2023-04-04 21:43:44,727 -> BaseNote.__init__() missing 3 required positional arguments: 'body', 'created_at', and 'modified_at'
+2023-04-04 21:43:44,727 -> <bound method ViewController.menu of <controllers.ViewController.ViewController object at 0x000001B4CA1144D0>>
+2023-04-04 21:43:44,727 -> <bound method ViewController.menu of <controllers.ViewController.ViewController object at 0x000001B4CA1144D0>>
+2023-04-04 21:43:44,727 -> <bound method ViewController.menu of <controllers.ViewController.ViewController object at 0x000001B4CA1144D0>>
+2023-04-04 21:43:44,727 -> <bound method ViewController.menu of <controllers.ViewController.ViewController object at 0x000001B4CA1144D0>>
+2023-04-04 21:43:44,727 -> <bound method ViewController.menu of <controllers.ViewController.ViewController object at 0x000001B4CA1144D0>>
+2023-04-04 21:43:44,728 -> <bound method ViewController.menu of <controllers.ViewController.ViewController object at 0x000001B4CA1144D0>>
+2023-04-04 21:43:44,728 -> <bound method ViewController.menu of <controllers.ViewController.ViewController object at 0x000001B4CA1144D0>>
+2023-04-04 21:43:56,969 -> <bound method ViewController.menu of <controllers.ViewController.ViewController object at 0x000001B4CA1144D0>>
+2023-04-04 21:43:58,568 -> <bound method ViewController.menu of <controllers.ViewController.ViewController object at 0x000001B4CA1144D0>>
+2023-04-04 21:44:06,420 -> <bound method ViewController.list of <controllers.ViewController.ViewController object at 0x000001B4CA1144D0>>
+2023-04-04 21:44:45,344 -> BaseNote.__init__() missing 3 required positional arguments: 'body', 'created_at', and 'modified_at'
+2023-04-04 21:44:45,345 -> <bound method ViewController.menu of <controllers.ViewController.ViewController object at 0x000001B4CA1144D0>>
+2023-04-04 21:44:45,345 -> <bound method ViewController.menu of <controllers.ViewController.ViewController object at 0x000001B4CA1144D0>>
+2023-04-04 21:44:45,345 -> <bound method ViewController.menu of <controllers.ViewController.ViewController object at 0x000001B4CA1144D0>>
+2023-04-04 21:45:29,142 -> <bound method ViewController.menu of <controllers.ViewController.ViewController object at 0x000001B4CA1144D0>>
+2023-04-04 21:45:53,818 -> BaseNote.__init__() missing 3 required positional arguments: 'body', 'created_at', and 'modified_at'
+2023-04-04 21:46:12,575 -> <bound method ViewController.list of <controllers.ViewController.ViewController object at 0x000001B4CA1144D0>>
+2023-04-04 21:46:29,873 -> BaseNote.__init__() missing 3 required positional arguments: 'body', 'created_at', and 'modified_at'
+2023-04-04 21:47:06,439 -> <bound method ViewController.menu of <controllers.ViewController.ViewController object at 0x000002C17F5744D0>>
+2023-04-04 21:47:27,649 -> <bound method ViewController.add of <controllers.ViewController.ViewController object at 0x000002C17F5744D0>>
+2023-04-04 21:47:32,237 -> <bound method ViewController.list of <controllers.ViewController.ViewController object at 0x000002C17F5744D0>>
+2023-04-04 21:48:04,827 -> <bound method ViewController.read_note of <controllers.ViewController.ViewController object at 0x000002C17F5744D0>>
+2023-04-04 21:48:28,622 -> <bound method ViewController.menu of <controllers.ViewController.ViewController object at 0x000002C17F5744D0>>
+2023-04-04 22:26:30,982 -> <bound method ViewController.menu of <controllers.ViewController.ViewController object at 0x00000203398544D0>>
+2023-04-04 22:27:37,052 -> <bound method ViewController.add of <controllers.ViewController.ViewController object at 0x00000203398544D0>>
+2023-04-04 22:27:43,691 -> <bound method ViewController.menu of <controllers.ViewController.ViewController object at 0x00000203398544D0>>
+2023-04-04 22:27:49,602 -> <bound method ViewController.list of <controllers.ViewController.ViewController object at 0x00000203398544D0>>
+2023-04-04 22:28:03,837 -> <bound method ViewController.read_note of <controllers.ViewController.ViewController object at 0x00000203398544D0>>
